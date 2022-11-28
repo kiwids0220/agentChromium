@@ -8,6 +8,6 @@ Lots more need to be done. Plz Feel free to add in more functionalities as you w
 @mhskai2017
 
 
-#Install Dependencies
+# Install Dependencies
 
 pip3 install websocket-client
