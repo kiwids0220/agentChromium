@@ -13,6 +13,7 @@ import threading
 
 
 wsDEBUGURLS=[]
+DEBUG_PORT=9222
 
 websocket.enableTrace(False)
 
@@ -90,7 +91,6 @@ class agentShell(cmd.Cmd):
         t = threading.Thread(target=agentChromium.setDiscoveryTargets, args=(self,self.DebugURLs))
         t.start()
 
-DEBUG_PORT=9222
 
 threads = list()
 class agentChromium:
@@ -137,7 +137,7 @@ class agentChromium:
 if __name__ == "__main__":
     threads = set()
     c = agentChromium()
-    c.setRemoteDebugPort(9222)
+    c.setRemoteDebugPort(DEBUG_PORT)
     getBrowserVersion()
     wsDEBUGURLS= getDebuggerUrlsandInfo()
 
