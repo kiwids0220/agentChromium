@@ -37,12 +37,12 @@ def on_close(ws, close_status_code, close_msg):
     print("""========== Press Enter or Type "setTargetDiscovery" again to restart the monitoring websocket""")
     
 
-@staticmethod
+
 def parseIncomingTargetsInfo(jsonNode):
     node = json.loads(jsonNode)
     #print(jsonNode)
     print("[{}][{}][{}]".format(node["method"],node["params"]["targetInfo"]["url"], node["params"]["targetInfo"]["title"]))
-@staticmethod
+
 def getDebuggerUrlsandInfo():
     #Making GET request to remote localhost with the debug port we specified.
         r = requests.get(f"http://localhost:{DEBUG_PORT}/json")
@@ -54,7 +54,7 @@ def getDebuggerUrlsandInfo():
         #print(debuggerUrls)
         #print(totalTabs)
         return debuggerUrls
-@staticmethod
+
 def getBrowserVersion():
     #print(debuggerURL)
     r = requests.get(f"http://localhost:{DEBUG_PORT}/json/version")
